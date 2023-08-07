@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>SC Sales Management</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>SC Sales Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
+
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">SC Sales Management</a>
-  </nav>
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">SC Sales Management</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/clients">Client Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sales">Sales</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/income">Income</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/settings">Settings</a>
+            </li>
+        </ul>
+    </nav>
 
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container text-center">
-      <h1>Welcome to SC Sales Management</h1>
-      <p class="lead">Your one-stop solution for managing sales.</p>
-      <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h1>Welcome to SC Sales Management</h1>
+            <p class="lead">Your one-stop solution for managing sales.</p>
+            <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+        </div>
     </div>
-  </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Feature 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="col-md-4">
-        <h2>Feature 2</h2>
-        <p>Nulla convallis odio sit amet luctus vestibulum.</p>
-      </div>
-      <div class="col-md-4">
-        <h2>Feature 3</h2>
-        <p>Integer eu elit id ipsum hendrerit tincidunt.</p>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Feature 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Feature 2</h2>
+                <p>Nulla convallis odio sit amet luctus vestibulum.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Feature 3</h2>
+                <p>Integer eu elit id ipsum hendrerit tincidunt.</p>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <footer class="footer bg-dark text-white text-center">
-    <p>&copy; 2023 SC Sales Management</p>
-  </footer>
+    <footer class="footer bg-dark text-white text-center">
+        <p>&copy; 2023 SC Sales Management</p>
+    </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
