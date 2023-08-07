@@ -18,10 +18,36 @@ class Client(db.Model):
 def index():
     return render_template('index.html')
 
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+
+    # In a real-world application, you would check the username and password against a database or other authentication method.
+    # For simplicity, we'll just consider "admin" as a valid user with any password.
+
+    if username == 'admin':
+        return redirect(url_for('dashboard'))
+
+    # Add an error message to display invalid login attempt if needed.
+    return render_template('index.html')
+
+@app.route('/dashboard')
+def dashboard():
+    # In a real-world application, you may want to add authentication check to ensure the user is logged in before accessing this page.
+    clients = Client.query.all()
+    return render_template('dashboard.html', clients=clients)
+
 @app.route('/clients')
 def client_management():
-    clients = Client.query.all()
-    return render_template('clients.html', clients=clients)
+    search_query = request.args.get('search_query', '')
+
+    if search_query:
+        clients = Client.query.filter(Client.name.contains(search_query)).all()
+    else:
+        clients = Client.query.all()
+
+    return render_template('clients.html', clients=clients, search_query=search_query)
 
 @app.route('/add-client', methods=['GET', 'POST'])
 def add_client():

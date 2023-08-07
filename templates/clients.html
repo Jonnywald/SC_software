@@ -7,6 +7,14 @@
 <body>
   <div class="container mt-5">
     <h1 class="mb-4">Client List</h1>
+    <form action="{{ url_for('client_management') }}" method="GET" class="mb-3">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search by name" name="search_query" value="{{ search_query }}">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </form>
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
@@ -31,6 +39,7 @@
       </tbody>
     </table>
     <a href="{{ url_for('add_client') }}" class="btn btn-success">Add Client</a>
+    <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Return to Dashboard</a>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
