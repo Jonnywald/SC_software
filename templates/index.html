@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SC Sales Management - Login</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
   <div class="container mt-5">
     <div class="jumbotron">
-      <h1 class="display-4">SC Sales Management</h1>
+      <h1 class="display-4 text-center">SC Sales Management</h1>
       <form action="{{ url_for('login') }}" method="post">
         <div class="form-group">
           <label for="username">Username:</label>
@@ -17,7 +18,7 @@
           <label for="password">Password:</label>
           <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
       </form>
     </div>
   </div>
